@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angelo Pasion | Graphic Designer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1e293b, #020617);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5f5;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #93c5fd;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #020617;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+    .card img {
+      transition: transform 0.3s ease;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #bfdbfe;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #020617;
+      color: #94a3b8;
+    }
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Angelo V. Pasion</h1>
+  <p>Graphic Designer • Logo Designer • Print Specialist</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a Graphic Designer with strong experience in print production, logo design, and layout design. 
+    With over 5 years working in apparel and print production, I create designs that look great both on screen and in real-life prints.
+    I specialize in clean, effective visuals that communicate clearly and professionally.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card">Graphic Design (Print & Digital)</div>
+    <div class="card">Logo Design & Branding</div>
+    <div class="card">T-Shirt & Apparel Design</div>
+    <div class="card">Adobe Photoshop</div>
+    <div class="card">Print-Ready File Setup</div>
+    <div class="card">Color Correction & Quality Control</div>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="card">
+    <h3>Graphic Designer / Printer Operator</h3>
+    <p><strong>ML Sportwear Philippines</strong> (2020 – 2025)</p>
+    <ul>
+      <li>Designed logos, apparel graphics, and layouts for printing</li>
+      <li>Prepared print-ready files with accurate colors and sizing</li>
+      <li>Ensured quality control for all finished products</li>
+      <li>Worked closely with production teams to meet deadlines</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Portfolio</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Logo Design</h3>
+      <img src="images/logo-sample.jpg" alt="Logo Design Sample" style="width:100%; border-radius:12px; margin-bottom:10px;">
+      <p>Clean and modern logo designs built for brand recognition.</p>
+    </div>
+    <div class="card">
+      <h3>T-Shirt Design</h3>
+      <img src="images/tshirt-sample.jpg" alt="T-Shirt Design Sample" style="width:100%; border-radius:12px; margin-bottom:10px;">
+      <p>Print-ready apparel designs optimized for fabric and color accuracy.</p>
+    </div>
+    <div class="card">
+      <h3>Print Layout</h3>
+      <img src="images/print-layout.jpg" alt="Print Layout Sample" style="width:100%; border-radius:12px; margin-bottom:10px;">
+      <p>Posters, marketing materials, and production-ready layouts.</p>
+    </div>
+  </div>
+  <p style="margin-top:20px; color:#94a3b8;">*Replace images with your actual work files*</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:angelopasion1313@gmail.com">angelopasion1313@gmail.com</a></p>
+  <p>Phone: 0915‑412‑5396</p>
+  <p>Location: Nueva Ecija, Philippines</p>
+</section>
+
+<footer>
+  <p>© 2026 Angelo Pasion | Graphic Designer</p>
+</footer>
+
+<!-- Image Modal -->
+<div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:999;">
+  <img id="modal-img" style="max-width:90%; max-height:90%; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,0.8);">
+</div>
+
+<script>
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+
+  document.querySelectorAll('.card img').forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
